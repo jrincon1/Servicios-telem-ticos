@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+            <meta charset="UTF-8">
+            <title>Basketball</title>
+            <style>
+               .body {
+                background-image: url('Cancha_background.jpg');
+                background-repeat:no-repeat;
+                background-position-x:center;
+                background-position-y:center;
+                background-size: 1500px 1000px;
+                padding-top: 80px;
+                padding-left: 100px;
+               }
+               img#jugador1 {
+                  position: absolute;
+                  top: 50px; left: 200px;
+               }
+        
+               img#pelota1 {
+                  position: absolute;
+                  top: 100px; left: 300px;
+               }
+
+               .video-wrap {
+                position: absolute;
+                top: 780px; left: 1600px;
+                
+              }
+
+              
+              .anotaciones {
+                position: absolute;
+                top: 20px; left: 900px;
+                
+              }
+
+              .posicion_a {
+                position: absolute;
+                top: 20px; left: 250px;
+                
+              }
+
+              .posicion_b {
+                position: absolute;
+                top: 20px; left: 1550px;
+                
+              }
+        
+              .zona_boton {
+                text-align: center;
+                width: 20%;
+                margin-top: 580px;
+              }
+
+              .zona_boton_2 {
+                text-align: center;
+                width: 20%;
+                margin-top: 40px;
+              }
+
+              .zona_boton_3 {
+                text-align: center;
+                width: 20%;
+                margin-top: 40px;
+              }
+              
+              img#jugador2 {
+                  position: absolute;
+                  width: 5%;
+                  top: 50px; left: 1600px;
+               }
+
+               .div_hide{
+                opacity: 0;
+               }
+               
+
+           </style>
+        
+        <title>titulo</title>
+    </head>
+    <body>
+        <div class="body">
+            <div class="anotaciones">
+            <span id="gol1" style="font-size: 2.5em; color:#1f1e20;"> Player A:0 </span>
+            <p style="color:#888888;text-indent:20px"></p>
+            <span id="gol2" style="font-size: 2.5em; color:#1f1e20;"> Player B:0 </span>
+            </div>
+
+            <div class="posicion_a">
+              <span id="pos1" style="font-size: 1.5em; color:#1f1e20;"> Posición A:0 </span>
+              <p style="color:#888888;text-indent:20px"></p>              
+              </div>
+
+            <div class="posicion_b">
+              <span id="pos2" style="font-size: 1.5em; color:#1f1e20;"> Posición B:0 </span>
+              <p style="color:#888888;text-indent:20px"></p>              
+              </div>
+
+            <background-image:url('https://i.pinimg.com/736x/01/10/3d/01103d8bdf9993edfaaa8fa70495d688.jpg'></background-image:url>
+            <img id="pelota1" src='Pelota.png' alt="Esta es la pelota" width="50" height="50">	
+            <div class="zona_boton">
+               <!-- <input type="button" onclick='setInterval("lanzar()",60)' value="A Lanzar!">--> 
+               <input type="button" onclick="lanzar()" value="Lanzamiento">
+            </div>
+            <div class="zona_boton_2">
+                <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/57/57093.png" height ="30" width="30" onclick='subir()'/></button>
+            </div>
+            <div class="zona_boton_3">
+                <button type="button"> <img src="https://cdn-icons-png.flaticon.com/512/57/57085.png" height ="30" width="30" onclick='bajar()'/></button>
+            </div>
+            <div class="centro">
+                <canvas id="canvas" height ="30" width="30"></canvas>
+            </div>
+            <img id="jugador1" src="https://www.gifsanimados.org/data/media/169/correr-imagen-animada-0008.gif" >
+            <img id="jugador2" src="https://www.gifsanimados.org/data/media/169/correr-imagen-animada-0077.gif" >
+            <!--contenedor para v ideo-->
+            <div class="video-wrap">
+                <video id="video" playsinline autoplay></video>
+            </div>
+            <script src="./Scripts/funciones.js"></script>
+            <script >
+              window.onload = iniciar_WEBCAM;
+            </script>
+            
+            
+    </body>
+</html>
